@@ -44,15 +44,6 @@ public class Main {
         
         System.out.println("the winner is: " + tableOnPlaying.getWinner().getName()
                 + " con "+ tableOnPlaying.getWinner().getPoints()+" puntos.");
-        int pointsone = one.getPoints();
-        int pointstwo = two.getPoints();
-        int pointsthree = three.getPoints();
-        int pointsfour = four.getPoints();
-        System.out.println("Los puntos fueron: " 
-                + pointsone + "|" +one.totalPoints());
-        System.out.println(pointstwo + "|" + two.totalPoints());
-        System.out.println( pointsthree + "|" +three.totalPoints());
-        System.out.println(pointsfour+ "|" +four.totalPoints());
         int Cards =one.getHand().SizeOf()+two.getHand().SizeOf()+three.getHand().SizeOf()+four.getHand().SizeOf();
         System.out.println("Han sido Jugadas "+Cards+" cartas");
                 

@@ -1,5 +1,6 @@
 package Players;
 import cards.*;
+import static java.lang.Thread.sleep;
 import java.util.*;
 
 public class Player extends Observable implements Runnable{
@@ -25,6 +26,9 @@ public class Player extends Observable implements Runnable{
         while(this.table.getMatching() == true){
             this.table.Match(this);
             this.sumPoints();
+            try{
+                sleep((int) (Math.random() * 100));
+            }catch (InterruptedException e){}
         }
     }   
     

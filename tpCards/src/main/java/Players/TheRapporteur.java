@@ -16,22 +16,19 @@ import java.util.Observer;
 public class TheRapporteur implements Observer {
 
     Player theWinner;
-    int count;
     
     public TheRapporteur() {
         this.theWinner=null;
-        this.count=0;
     }
     
     @Override
     public synchronized void update(Observable o, Object arg) {
             if(o instanceof Player){
                 if(((Player) o).getTable().getMatching()){
-                    this.count++;
                     Card theTakenCard = ((Player) o).getHand().lastCard();
                     System.out.println("El jugador "+((Player) o).getName()
-                            +" ha tomado la carta "+ theTakenCard.toString() 
-                            +". Van jugadas "+this.count+" cartas" );
+                            + " ha tomado la carta " + theTakenCard.toString(); 
+                            
                     if(((Player) o).getTable().getWinner()!=null){
                         if(((Player) o).getPoints()>((Player) o).getTable().getWinner().getPoints()){
                             this.theWinner = ((Player) o);
