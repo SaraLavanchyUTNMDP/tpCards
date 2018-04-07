@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TpCardsGame">
+  <ClassDiagramComponents>
+    <Class name="Card" package="cards" visibility="public" xPosition="314.0" yPosition="39.0">
+      <Fields>
+        <Field name="number" type="int" visibility="package"/>
+        <Field name="type" type="TypeOfCard" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="number"/>
+          <Argument type="TypeOfCard" name="type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="TypeOfCard" name="type"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mazo" package="cards" visibility="public" xPosition="1108.0" yPosition="101.0">
+      <Fields>
+        <Field name="cards" type="List&lt;Card&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addCard" returnType="void" visibility="public">
+          <Argument type="Card" name="e"/>
+        </Method>
+        <Method name="dischargeMazo" returnType="Card" visibility="public"/>
+        <Method name="chargeMazo" returnType="void" visibility="public"/>
+        <Method name="showMazo" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="SizeOf" returnType="int" visibility="public"/>
+        <Method name="lastCard" returnType="Card" visibility="public"/>
+        <Method name="totalPointsOfTheMazo" returnType="int" visibility="public"/>
+        <Method name="isEmpty" returnType="boolean" visibility="public"/>
+        <Method name="getCards" returnType="List&lt;Card&gt;" visibility="public"/>
+        <Method name="clone" returnType="Object" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Connecction" package="JDBC" visibility="public" xPosition="1909.0" yPosition="111.0">
+      <Fields>
+        <Field name="conexion" type="Connection" visibility="private"/>
+        <Field name="instance" type="Connecction" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="Connecction" visibility="public" isStatic="true"/>
+        <Method name="getConexion" returnType="Connection" visibility="public"/>
+        <Method name="setConexion" returnType="void" visibility="public">
+          <Argument type="Connection" name="conexion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MatchConnection" package="JDBC" visibility="public" xPosition="1424.0" yPosition="137.0">
+      <Fields>
+        <Field name="myConnection" type="Connecction" visibility="package"/>
+        <Field name="myQueries" type="Properties" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addAplayer" returnType="int" visibility="public">
+          <Argument type="Player" name="player"/>
+        </Method>
+        <Method name="newMatch" returnType="void" visibility="public">
+          <Argument type="List&lt;Player&gt;" name="players"/>
+          <Argument type="Player" name="winner"/>
+        </Method>
+        <Method name="addCardsOfMazo" returnType="void" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainPlayer" package="Players" visibility="public" xPosition="591.0" yPosition="684.0">
+      <Fields>
+        <Field name="mazo" type="Mazo" visibility="private"/>
+        <Field name="table" type="Table" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Table" name="tableOnPlaying"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="startMatch" returnType="void" visibility="public"/>
+        <Method name="entregarCarta" returnType="Card" visibility="public"/>
+        <Method name="getMazo" returnType="Mazo" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Matchs" package="Players" visibility="public" xPosition="767.0" yPosition="1464.0">
+      <Fields>
+        <Field name="tableOnPlaying" type="Table" visibility="private"/>
+        <Field name="dealer" type="MainPlayer" visibility="private"/>
+        <Field name="players" type="List&lt;Player&gt;" visibility="private"/>
+        <Field name="theRappporteur" type="TheRapporteur" visibility="private"/>
+        <Field name="myThreads" type="List&lt;Thread&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Gamming" returnType="void" visibility="public"/>
+        <Method name="addPlayer" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="ChargingMyPlayers" returnType="void" visibility="public"/>
+        <Method name="saveResults" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Player" package="Players" visibility="public" xPosition="1407.0" yPosition="617.0">
+      <Fields>
+        <Field name="hand" type="Mazo" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="points" type="int" visibility="private"/>
+        <Field name="table" type="Table" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Table" name="tableOnPlaying"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="takeaCard" returnType="void" visibility="public">
+          <Argument type="Card" name="x"/>
+        </Method>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="sumPoints" returnType="void" visibility="public"/>
+        <Method name="totalPoints" returnType="int" visibility="public"/>
+        <Method name="getHand" returnType="Mazo" visibility="public"/>
+        <Method name="setHand" returnType="void" visibility="public">
+          <Argument type="Mazo" name="hand"/>
+        </Method>
+        <Method name="getTable" returnType="Table" visibility="public"/>
+        <Method name="setTable" returnType="void" visibility="public">
+          <Argument type="Table" name="table"/>
+        </Method>
+        <Method name="getPoints" returnType="int" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Table" package="Players" visibility="public" xPosition="73.0" yPosition="954.0">
+      <Fields>
+        <Field name="card" type="Card" visibility="private"/>
+        <Field name="winner" type="Player" visibility="private"/>
+        <Field name="matching" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="throwAcardOnTheTable" returnType="void" visibility="public">
+          <Argument type="Card" name="x"/>
+        </Method>
+        <Method name="theCardOnTheTable" returnType="Card" visibility="public"/>
+        <Method name="Match" returnType="void" visibility="public">
+          <Argument type="Player" name="thePlayer"/>
+        </Method>
+        <Method name="getMatching" returnType="boolean" visibility="public"/>
+        <Method name="theTableIsMatching" returnType="void" visibility="public">
+          <Argument type="boolean" name="isMatching"/>
+        </Method>
+        <Method name="getWinner" returnType="Player" visibility="public"/>
+        <Method name="setWinner" returnType="void" visibility="public">
+          <Argument type="Player" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TheRapporteur" package="Players" visibility="public" xPosition="1824.0" yPosition="1384.0">
+      <Fields>
+        <Field name="theWinner" type="Player" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="Observable" name="o"/>
+          <Argument type="Object" name="arg"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TpCardsGame" package="tpcardsgame" visibility="public" xPosition="2026.0" yPosition="702.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="TypeOfCard" package="cards" visibility="public" xPosition="49.0" yPosition="67.0">
+      <Literals>
+        <Literal name="GOLD"/>
+        <Literal name="WOOD"/>
+        <Literal name="HEART"/>
+        <Literal name="CUP"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="table" source="Players.Player" target="Players.Table" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.Player" target="cards.Mazo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="myConnection" source="JDBC.MatchConnection" target="JDBC.Connecction" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="JDBC.MatchConnection" target="Players.Player" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="winner" source="Players.Table" target="Players.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hand" source="Players.Player" target="cards.Mazo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.MainPlayer" target="cards.Card" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="theWinner" source="Players.TheRapporteur" target="Players.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="table" source="Players.MainPlayer" target="Players.Table" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazo" source="Players.MainPlayer" target="cards.Mazo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cards.Card" target="cards.TypeOfCard" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instance" source="JDBC.Connecction" target="JDBC.Connecction" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dealer" source="Players.Matchs" target="Players.MainPlayer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="theRappporteur" source="Players.Matchs" target="Players.TheRapporteur" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.Table" target="Players.Player" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cards.Mazo" target="cards.Card" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tableOnPlaying" source="Players.Matchs" target="Players.Table" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.Player" target="Players.Table" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="JDBC.Connecction" target="JDBC.Connecction" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="players" source="Players.Matchs" target="Players.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Player&gt;"/>
+    <UseRelation source="JDBC.MatchConnection" target="cards.Mazo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.Player" target="cards.Card" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.Table" target="cards.Card" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Players.MainPlayer" target="cards.Mazo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="cards.Card" target="cards.TypeOfCard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="card" source="Players.Table" target="cards.Card" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cards" source="cards.Mazo" target="cards.Card" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Card&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
