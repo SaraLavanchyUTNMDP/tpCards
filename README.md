@@ -18,6 +18,7 @@ Tipo de conexión:
 ```
 JDBC
 ```
-* [MySql](https://es.wikipedia.org/wiki/MySQL) - 
-*[JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)
+* [MySql](https://es.wikipedia.org/wiki/MySQL) - SDADADSADADSA
+
+* [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)-
 
