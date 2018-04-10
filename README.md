@@ -18,7 +18,7 @@ Tipo de conexión:
 ```
 JDBC
 ```
-* [MySql](https://es.wikipedia.org/wiki/MySQL) - . MySQL fue originalmente construido para la velocidad, mientras que SQL Server se construyó para  gestiones complejas y recuperación. Como la base de datos precisada para este proyecto es bastante simple, entonces ete lenguaje en contraposicion con sql server pasa a ser el más optimo. 
+* [MySql](https://es.wikipedia.org/wiki/MySQL) - . Como MySql es una base de datos relacional, es lo más optimo para mi proyecto ya que para poder persistir la informacion del ganador, sus cartas y los resultados de cada partido voy a necesitar relacionar las diferentes tablas. Ademas es escalable para mi proyecto ya que ante el aumento de requerimientos en el mismo, la base de datos seguira siendo compatible.
 
-* [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)-
+* [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)- 
 
