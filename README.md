@@ -18,7 +18,7 @@ Tipo de conexión:
 ```
 JDBC
 ```
-* [MySql](https://es.wikipedia.org/wiki/MySQL) - . MySQL fue originalmente construido para la velocidad, mientras que SQL Server se construyó para  gestiones complejas y recuperación. Como 
+* [MySql](https://es.wikipedia.org/wiki/MySQL) - . MySQL fue originalmente construido para la velocidad, mientras que SQL Server se construyó para  gestiones complejas y recuperación. Como la base de datos precisada para este proyecto es bastante simple, entonces ete lenguaje en contraposicion con sql server pasa a ser el más optimo. 
 
 * [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)-
 
