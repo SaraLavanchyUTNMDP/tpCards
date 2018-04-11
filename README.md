@@ -20,5 +20,5 @@ JDBC
 ```
 * [MySql](https://es.wikipedia.org/wiki/MySQL) - . Como MySql es una base de datos relacional, es lo más optimo para mi proyecto ya que para poder persistir la informacion del ganador, sus cartas y los resultados de cada partido voy a necesitar relacionar las diferentes tablas. Ademas es escalable para mi proyecto ya que ante el aumento de requerimientos en el mismo, la base de datos seguira siendo compatible.
 
-* [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)- 
+* [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)-Decidí utilizar este método ya que es nativo de Java, es flexible, su curva de aprendizaje es rápida y es escalable para mi proyecto 
 
