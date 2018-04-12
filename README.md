@@ -22,5 +22,5 @@ JDBC
 
 * [JDBC](https://es.wikipedia.org/wiki/Java_Database_Connectivity)-Decidí utilizar este método ya que es nativo de Java, es flexible, su curva de aprendizaje es rápida y es escalable para mi proyecto 
 
-* The uml Diagram of my Proyect
-<br /> ![alt test](https://github.com/SaraLavanchyUTNMDP/tpCards/blob/master/uml.png "Project's UML")
+### The uml Diagram of my Proyect
+ ![alt test](https://github.com/SaraLavanchyUTNMDP/tpCards/blob/master/uml.png "Project's UML")
